@@ -1,0 +1,57 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        // {
+        //     "name": "clang++ - Build and debug active file",
+        //     "type": "lldb",
+        //     "request": "launch",
+        //     "program": "${fileDirname}/${fileBasenameNoExtension}",
+        //     "args": [],
+        //     "stopAtEntry": false,
+        //     "cwd": "${fileDirname}",
+        //     "environment": [],
+        //     "externalConsole": false,
+        //     "MIMode": "lldb",
+        //     "preLaunchTask": "build with clang++",
+        //     "targetArchitecture: arm64"
+        // },
+        {
+            "name": "clang++ - Build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "clang++ build active file"
+        },
+        {
+             "name": "Python: Current File",
+             "type": "python",
+             "request": "launch",
+             "program": "${file}",
+             "console": "integratedTerminal"
+        }
+        // c++ 컴파일 오류로 아래 설정을 지우고 위의 clang++ 설정으로 대체하였다. 2021.12.19
+        // 오류 내용: 'iostream' file not found
+        // {
+        //     "name": "cpp - 활성 파일 빌드 및 디버그",
+        //     "type": "cppdbg",
+        //     "request": "launch",
+        //     "program": "${fileDirname}/${fileBasenameNoExtension}",
+        //     "args": [],
+        //     "stopAtEntry": false,
+        //     "cwd": "${fileDirname}",
+        //     "environment": [],
+        //     "externalConsole": true,
+        //     "MIMode": "lldb",
+        //     "preLaunchTask": "C/C++: cpp 활성 파일 빌드"
+        // }
+    ]
+}
